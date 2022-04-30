@@ -7,23 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B4898815232DE0008CBB1C2 /* Pods_BCSell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8EE451FD05656B78110EEF /* Pods_BCSell.framework */; };
+		5A97F0EA281D08DE006FA8D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97F0E9281D08DE006FA8D2 /* Profile.swift */; };
+		5A97F0EC281D0B04006FA8D2 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97F0EB281D0B04006FA8D2 /* Profiles.swift */; };
 		5ADB11EE2818FD9E00BBF7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11ED2818FD9E00BBF7FC /* AppDelegate.swift */; };
 		5ADB11F02818FD9E00BBF7FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11EF2818FD9E00BBF7FC /* SceneDelegate.swift */; };
-		5ADB11F22818FD9E00BBF7FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11F12818FD9E00BBF7FC /* ViewController.swift */; };
+		5ADB11F22818FD9E00BBF7FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11F12818FD9E00BBF7FC /* HomeViewController.swift */; };
 		5ADB11F52818FD9E00BBF7FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADB11F32818FD9E00BBF7FC /* Main.storyboard */; };
 		5ADB11F72818FDA000BBF7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADB11F62818FDA000BBF7FC /* Assets.xcassets */; };
 		5ADB11FA2818FDA000BBF7FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADB11F82818FDA000BBF7FC /* LaunchScreen.storyboard */; };
+		5ADB1206281904C500BBF7FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADB1205281904C500BBF7FC /* GoogleService-Info.plist */; };
+		5ADB12082819D35700BBF7FC /* ListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB12072819D35700BBF7FC /* ListingTableViewController.swift */; };
+		5ADB120A2819D42C00BBF7FC /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB12092819D42C00BBF7FC /* Listing.swift */; };
+		5ADB120C281A22D300BBF7FC /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB120B281A22D300BBF7FC /* PhotosCollectionViewCell.swift */; };
+		5ADB120E281B5BDE00BBF7FC /* Listings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB120D281B5BDE00BBF7FC /* Listings.swift */; };
+		5ADB1210281CA55900BBF7FC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB120F281CA55800BBF7FC /* Photo.swift */; };
+		5ADB1212281CC92D00BBF7FC /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB1211281CC92D00BBF7FC /* Photos.swift */; };
+		5ADB1214281CD17100BBF7FC /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB1213281CD17100BBF7FC /* UIBarButtonItem+hide.swift */; };
+		5ADB1216281CD1C700BBF7FC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB1215281CD1C700BBF7FC /* UIViewController+Alert.swift */; };
+		5ADB1218281CEF3F00BBF7FC /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB1217281CEF3F00BBF7FC /* UIView+AddBorder.swift */; };
+		5ADB121C281CFA4A00BBF7FC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB121B281CFA4900BBF7FC /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39DE1B4E2D4DDAC46137B4BD /* Pods-BCSell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSell.debug.xcconfig"; path = "Target Support Files/Pods-BCSell/Pods-BCSell.debug.xcconfig"; sourceTree = "<group>"; };
+		5A97F0E9281D08DE006FA8D2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5A97F0EB281D0B04006FA8D2 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
 		5ADB11EA2818FD9E00BBF7FC /* BCSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADB11ED2818FD9E00BBF7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADB11EF2818FD9E00BBF7FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5ADB11F12818FD9E00BBF7FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5ADB11F12818FD9E00BBF7FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5ADB11F42818FD9E00BBF7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5ADB11F62818FDA000BBF7FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ADB11F92818FDA000BBF7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ADB11FB2818FDA000BBF7FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ADB1205281904C500BBF7FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5ADB12072819D35700BBF7FC /* ListingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewController.swift; sourceTree = "<group>"; };
+		5ADB12092819D42C00BBF7FC /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		5ADB120B281A22D300BBF7FC /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		5ADB120D281B5BDE00BBF7FC /* Listings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listings.swift; sourceTree = "<group>"; };
+		5ADB120F281CA55800BBF7FC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		5ADB1211281CC92D00BBF7FC /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photos.swift; path = ../../Snacktacular/Snacktacular/Models/Photos.swift; sourceTree = "<group>"; };
+		5ADB1213281CD17100BBF7FC /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+hide.swift"; path = "../../Snacktacular/Snacktacular/Utilities/UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
+		5ADB1215281CD1C700BBF7FC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Alert.swift"; path = "../../Snacktacular/Snacktacular/Utilities/UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		5ADB1217281CEF3F00BBF7FC /* UIView+AddBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AddBorder.swift"; path = "../../Snacktacular/Snacktacular/Utilities/UIView+AddBorder.swift"; sourceTree = "<group>"; };
+		5ADB121B281CFA4900BBF7FC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5DD4928A8294BC73E7727E38 /* Pods-BCSell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSell.release.xcconfig"; path = "Target Support Files/Pods-BCSell/Pods-BCSell.release.xcconfig"; sourceTree = "<group>"; };
+		7E8EE451FD05656B78110EEF /* Pods_BCSell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4898815232DE0008CBB1C2 /* Pods_BCSell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26980DFDDF9EFD7089F09F38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39DE1B4E2D4DDAC46137B4BD /* Pods-BCSell.debug.xcconfig */,
+				5DD4928A8294BC73E7727E38 /* Pods-BCSell.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5ADB11E12818FD9E00BBF7FC = {
 			isa = PBXGroup;
 			children = (
 				5ADB11EC2818FD9E00BBF7FC /* BCSell */,
 				5ADB11EB2818FD9E00BBF7FC /* Products */,
+				26980DFDDF9EFD7089F09F38 /* Pods */,
+				69104CFEEEB295345D1815E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +100,34 @@
 			children = (
 				5ADB11ED2818FD9E00BBF7FC /* AppDelegate.swift */,
 				5ADB11EF2818FD9E00BBF7FC /* SceneDelegate.swift */,
-				5ADB11F12818FD9E00BBF7FC /* ViewController.swift */,
+				5ADB11F12818FD9E00BBF7FC /* HomeViewController.swift */,
+				5ADB12072819D35700BBF7FC /* ListingTableViewController.swift */,
+				5ADB120B281A22D300BBF7FC /* PhotosCollectionViewCell.swift */,
+				5ADB121B281CFA4900BBF7FC /* ProfileViewController.swift */,
+				5A97F0E9281D08DE006FA8D2 /* Profile.swift */,
+				5A97F0EB281D0B04006FA8D2 /* Profiles.swift */,
+				5ADB12092819D42C00BBF7FC /* Listing.swift */,
+				5ADB120D281B5BDE00BBF7FC /* Listings.swift */,
+				5ADB120F281CA55800BBF7FC /* Photo.swift */,
+				5ADB1211281CC92D00BBF7FC /* Photos.swift */,
 				5ADB11F32818FD9E00BBF7FC /* Main.storyboard */,
+				5ADB1213281CD17100BBF7FC /* UIBarButtonItem+hide.swift */,
+				5ADB1215281CD1C700BBF7FC /* UIViewController+Alert.swift */,
+				5ADB1217281CEF3F00BBF7FC /* UIView+AddBorder.swift */,
 				5ADB11F62818FDA000BBF7FC /* Assets.xcassets */,
 				5ADB11F82818FDA000BBF7FC /* LaunchScreen.storyboard */,
 				5ADB11FB2818FDA000BBF7FC /* Info.plist */,
+				5ADB1205281904C500BBF7FC /* GoogleService-Info.plist */,
 			);
 			path = BCSell;
+			sourceTree = "<group>";
+		};
+		69104CFEEEB295345D1815E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E8EE451FD05656B78110EEF /* Pods_BCSell.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ADB11FE2818FDA000BBF7FC /* Build configuration list for PBXNativeTarget "BCSell" */;
 			buildPhases = (
+				A3ACD5FFB65C0EA4B809C781 /* [CP] Check Pods Manifest.lock */,
 				5ADB11E62818FD9E00BBF7FC /* Sources */,
 				5ADB11E72818FD9E00BBF7FC /* Frameworks */,
 				5ADB11E82818FD9E00BBF7FC /* Resources */,
+				81BF109AEB7C286E18B4EDEC /* [CP] Embed Pods Frameworks */,
+				89DCD3256F9D360D9A73CB75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ADB11FA2818FDA000BBF7FC /* LaunchScreen.storyboard in Resources */,
+				5ADB1206281904C500BBF7FC /* GoogleService-Info.plist in Resources */,
 				5ADB11F72818FDA000BBF7FC /* Assets.xcassets in Resources */,
 				5ADB11F52818FD9E00BBF7FC /* Main.storyboard in Resources */,
 			);
@@ -133,12 +200,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		81BF109AEB7C286E18B4EDEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BCSell/Pods-BCSell-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BCSell/Pods-BCSell-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BCSell/Pods-BCSell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89DCD3256F9D360D9A73CB75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BCSell/Pods-BCSell-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BCSell/Pods-BCSell-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BCSell/Pods-BCSell-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3ACD5FFB65C0EA4B809C781 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BCSell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5ADB11E62818FD9E00BBF7FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ADB11F22818FD9E00BBF7FC /* ViewController.swift in Sources */,
+				5ADB1212281CC92D00BBF7FC /* Photos.swift in Sources */,
+				5ADB1210281CA55900BBF7FC /* Photo.swift in Sources */,
+				5ADB1214281CD17100BBF7FC /* UIBarButtonItem+hide.swift in Sources */,
+				5A97F0EA281D08DE006FA8D2 /* Profile.swift in Sources */,
+				5ADB120E281B5BDE00BBF7FC /* Listings.swift in Sources */,
+				5ADB1216281CD1C700BBF7FC /* UIViewController+Alert.swift in Sources */,
+				5ADB120C281A22D300BBF7FC /* PhotosCollectionViewCell.swift in Sources */,
+				5ADB12082819D35700BBF7FC /* ListingTableViewController.swift in Sources */,
+				5ADB11F22818FD9E00BBF7FC /* HomeViewController.swift in Sources */,
+				5A97F0EC281D0B04006FA8D2 /* Profiles.swift in Sources */,
+				5ADB1218281CEF3F00BBF7FC /* UIView+AddBorder.swift in Sources */,
+				5ADB120A2819D42C00BBF7FC /* Listing.swift in Sources */,
+				5ADB121C281CFA4A00BBF7FC /* ProfileViewController.swift in Sources */,
 				5ADB11EE2818FD9E00BBF7FC /* AppDelegate.swift in Sources */,
 				5ADB11F02818FD9E00BBF7FC /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +420,7 @@
 		};
 		5ADB11FF2818FDA000BBF7FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DE1B4E2D4DDAC46137B4BD /* Pods-BCSell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +449,7 @@
 		};
 		5ADB12002818FDA000BBF7FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DD4928A8294BC73E7727E38 /* Pods-BCSell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
