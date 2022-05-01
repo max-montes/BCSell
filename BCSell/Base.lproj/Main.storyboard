@@ -122,7 +122,7 @@
                         <sections>
                             <tableViewSection headerTitle="Item" id="Xi5-ys-zvz">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="199" id="knx-7l-VKc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="199" id="knx-7l-VKc">
                                         <rect key="frame" x="0.0" y="44.5" width="320" height="199"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="knx-7l-VKc" id="1WD-gH-1O8">
@@ -236,7 +236,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Photos" footerTitle="" id="A2C-xk-85n">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Yis-Pf-tAh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Yis-Pf-tAh">
                                         <rect key="frame" x="0.0" y="310.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yis-Pf-tAh" id="dJb-3y-B4P">
@@ -344,13 +344,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="lDh-Ke-g93">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7q7-Yy-TYt">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7q7-Yy-TYt">
                             <color key="tintColor" name="SecondaryColor"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="SvT-QI-VPu" id="tnx-Jy-Vx2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Hvf-9i-1mS">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Hvf-9i-1mS">
                             <color key="tintColor" red="0.85098040100000005" green="0.79607844350000001" blue="0.65098041299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="SvT-QI-VPu" id="2af-za-mJk"/>

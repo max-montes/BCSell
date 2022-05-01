@@ -57,6 +57,7 @@ class HomeViewController: UIViewController {
             let destination = segue.destination as! ListingTableViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
             destination.listing = listings.listingsArray[selectedIndexPath.row]
+            destination.profile = self.currentProfile
         } else if segue.identifier == "AddListing" {
             let navigationController = segue.destination as! UINavigationController
             let destination = navigationController.viewControllers.first as! ListingTableViewController

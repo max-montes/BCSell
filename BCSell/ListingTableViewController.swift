@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
+import FirebaseGoogleAuthUI
+import FirebaseAuthUI
+import GoogleSignIn
 
 private let dateFormatter: DateFormatter =  {
     let dateFormatter = DateFormatter()
@@ -48,6 +53,7 @@ class ListingTableViewController: UITableViewController {
         if photos == nil {
             photos = Photos()
         }
+        
         updateUserInterface()
         if itemNameTextField.text == "" {
             itemNameTextField.text = "Enter item name"
@@ -77,12 +83,16 @@ class ListingTableViewController: UITableViewController {
     }
     
     func updateUserInterface() {
+        //Set listing author, venmo, and date fields to profile fields
+        authorTextField.isEnabled = false
+        venmoTextField.isEnabled = false
+        datePostedTextField.isEnabled = false
         if authorTextField.text == "" {
-            authorTextField.text = profile.name ?? ""
+            //Do not listen to warning
+            authorTextField.text = (profile != nil ? profile.name : "")
         } else {
             authorTextField.text = listing.author
         }
-        
         if venmoTextField.text == "" {
             venmoTextField.text = profile.venmo
         } else {
@@ -92,6 +102,23 @@ class ListingTableViewController: UITableViewController {
         priceTextField.text = "\(listing.price)"
         datePostedTextField.text = dateFormatter.string(from: listing.postedOn)
         descriptionTextField.text = listing.description
+        if listing.documentID == "" { // This is a new review
+            addBordersToEditableObjects()
+        } else {
+            if listing.postingUserID == Auth.auth().currentUser?.uid { // Review posted by current user
+                enableEditing()
+            } else { // Review posted by different user
+                disableEditing()
+            }
+        }
+    }
+    
+    func enableEditing() {
+        self.navigationItem.leftItemsSupplementBackButton = false
+        saveButton.title = "Update"
+        cancelButton.title = "Cancel"
+        addBordersToEditableObjects()
+        //TODO: Add delete button
     }
     
     func updateFromUserInterface() {
@@ -100,11 +127,12 @@ class ListingTableViewController: UITableViewController {
         listing.venmo = venmoTextField.text ?? ""
         listing.author = authorTextField.text ?? ""
         listing.postedOn = DateFormatter().date(from: datePostedTextField.text ?? "") ?? Date()
-        //listing.photos = photos
-        listing.description = descriptionTextField.text
     }
     
     func disableEditing() {
+        saveButton.hide()
+        saveButton.title = "Save"
+        cancelButton.title = "Back"
         itemNameTextField.isEnabled = false
         priceTextField.isEnabled = false
         venmoTextField.isEnabled = false
@@ -112,6 +140,11 @@ class ListingTableViewController: UITableViewController {
         datePostedTextField.isEnabled = false
         descriptionTextField.isEditable = false
         addImagesButton.isHidden = true
+    }
+    
+    func addBordersToEditableObjects() {
+        itemNameTextField.addBorder(width: 0.2, radius: 5.0, color: .black)
+        priceTextField.addBorder(width: 0.2, radius: 5.0, color: .black)
     }
     
     func showAlert(title: String, message: String) {
