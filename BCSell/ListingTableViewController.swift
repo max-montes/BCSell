@@ -34,6 +34,7 @@ class ListingTableViewController: UITableViewController {
     
     var listing: Listing!
     var photos: Photos!
+    var photo: Photo!
     var profile: Profile!
     
     var imagePickerController = UIImagePickerController()
@@ -49,7 +50,7 @@ class ListingTableViewController: UITableViewController {
         if listing == nil {
             listing = Listing()
         }
-
+        
         if photos == nil {
             photos = Photos()
         }
@@ -69,17 +70,10 @@ class ListingTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-//        if listing.documentID != "" {
-//            self.navigationController?.setToolbarHidden(true, animated: true)
-//        }
         
-//        for photo in photos.photoArray {
-//            photos.loadData(photo: photo) {
-//
-//            }
-//        }
-        self.collectionView.reloadData()
+        photos.loadData(listing: listing) {
+            self.collectionView.reloadData()
+        }
     }
     
     func updateUserInterface() {
@@ -99,7 +93,7 @@ class ListingTableViewController: UITableViewController {
             venmoTextField.text = listing.venmo
         }
         itemNameTextField.text = listing.listingItemName
-        priceTextField.text = "\(listing.price)"
+        priceTextField.text = String(format: "%.2f", listing.price)
         datePostedTextField.text = dateFormatter.string(from: listing.postedOn)
         descriptionTextField.text = listing.description
         if listing.documentID == "" { // This is a new review
@@ -123,10 +117,11 @@ class ListingTableViewController: UITableViewController {
     
     func updateFromUserInterface() {
         listing.listingItemName = itemNameTextField.text ?? ""
-        listing.price = Double(priceTextField.text ?? "0.0") ?? 0.0
+        listing.price = Double(priceTextField.text ?? "0.00") ?? 0.00
         listing.venmo = venmoTextField.text ?? ""
         listing.author = authorTextField.text ?? ""
         listing.postedOn = DateFormatter().date(from: datePostedTextField.text ?? "") ?? Date()
+        listing.description = descriptionTextField.text ?? ""
     }
     
     func disableEditing() {
@@ -167,10 +162,9 @@ class ListingTableViewController: UITableViewController {
         updateFromUserInterface()
         listing.saveData { success in
             if success {
-                self.photos.saveImages(listing: self.listing)
                 self.leaveViewController()
             } else {
-                print("*** ERROR: Couldn't leave this view controller because data wasn't saved.")
+                self.oneButtonAlert(title: "Save Failed", message: "For some reason, the data would not save to the cloud.")
             }
         }
         leaveViewController()
@@ -196,7 +190,7 @@ class ListingTableViewController: UITableViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true)
-        }
+    }
 }
 
 extension ListingTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -206,7 +200,8 @@ extension ListingTableViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! PhotosCollectionViewCell
-        cell.image = photos.photoArray[indexPath.row].image
+        cell.listing = listing
+        cell.photo = photos.photoArray[indexPath.row]
         return cell
     }
 }
@@ -224,8 +219,10 @@ extension ListingTableViewController: UIImagePickerControllerDelegate, UINavigat
         }
         
         photo.saveData(listing: listing) { success in
-            self.photos.loadData(photo: photo) {
-                self.collectionView.reloadData()
+            if success {
+                self.photos.loadData(listing: self.listing) {
+                    self.collectionView.reloadData()
+                }
             }
         }
         dismiss(animated: true)

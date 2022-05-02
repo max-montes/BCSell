@@ -29,8 +29,8 @@ class Listing {
     }
     
     init(author: String, listingItemName: String, price: Double, venmo: String, postedOn: Date, photos: [UIImage], photosUUID: [String], description: String, postingUserID: String, documentID: String) {
-        self.author = author
-        self.listingItemName = listingItemName
+        self.author = author.capitalized
+        self.listingItemName = listingItemName.capitalized
         self.price = price
         self.venmo = venmo
         self.postedOn = postedOn
@@ -95,66 +95,4 @@ class Listing {
             }
         }
     }
-    
-
-    
-//    func saveImages(completed: @escaping (Bool) -> ()) {
-//        let db = Firestore.firestore()
-//        let storage = Storage.storage()
-//        //Convert appImage to Data type so it can be saved by Firebase Storage
-//        if photos.count == 0 {
-//            return
-//        }
-//
-//        for i in 0...photos.count-1 {
-//            let photo = photos[i]
-//            //var photoUUID = photosUUID[i]
-//            guard let imageToSave = photo.jpegData(compressionQuality: 0.7) else {
-//                print("Could not convert image to data format")
-//                return completed(false)
-//            }
-//            let uploadMetaData = StorageMetadata()
-//            uploadMetaData.contentType = "image/jpeg"
-//            while photosUUID.count - 1 < i {
-//                photosUUID.append("")
-//            }
-//            var photoUUID = photosUUID[i]
-//            if photoUUID != "" {
-//                //If there's no UUID, create one, and add it to array
-//                photoUUID = UUID().uuidString
-//                photosUUID[i] = photoUUID
-//            }
-//            //Create ref to upload storage with UUID we created
-//            let storageRef = storage.reference().child(documentID).child(photoUUID)
-//            let uploadTask = storageRef.putData(imageToSave, metadata: uploadMetaData) { metadata, error in
-//                guard error == nil else {
-//                    print("ERROR: during .putData storage upload for reference \(storageRef). Error = \(error?.localizedDescription ?? "<Unknown Error>")")
-//                    return completed(false)
-//                }
-//                print("😎 Upload worked: metadata is \(metadata)")
-//            }
-//            uploadTask.observe(.success) { snapshot in
-//                //Create the dictionary representing the data we want to save
-//                let dataToSave = self.dictionary
-//                let ref = db.collection("listings").document(self.documentID)
-//                ref.setData(dataToSave) { error in
-//                    if let error = error {
-//                        print("ERROR: saving document \(self.documentID) in success observer. Error = \(error.localizedDescription)")
-//                        completed(false)
-//                    } else {
-//                        print("Document updated with ref ID \(ref.documentID)")
-//                        completed(true)
-//                    }
-//                }
-//            }
-//
-//            uploadTask.observe(.failure) { snapshot in
-//                if let error = snapshot.error {
-//                    print("ERROR: \(error.localizedDescription) upload task for file \(photoUUID)")
-//                    return completed(false)
-//                }
-//            }
-//        }
-//    }
-//}
 }

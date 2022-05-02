@@ -10,6 +10,7 @@ import Firebase
 import FirebaseFirestore
 
 class Profile {
+    
     var name: String
     var venmo: String
     var postingUserID: String
@@ -20,7 +21,7 @@ class Profile {
     }
     
     init(name: String, venmo: String, postingUserID: String, documentID: String) {
-        self.name = name
+        self.name = name.capitalized
         self.venmo = venmo
         self.postingUserID = postingUserID
         self.documentID = documentID

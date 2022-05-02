@@ -10,6 +10,7 @@
 		4B4898815232DE0008CBB1C2 /* Pods_BCSell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8EE451FD05656B78110EEF /* Pods_BCSell.framework */; };
 		5A97F0EA281D08DE006FA8D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97F0E9281D08DE006FA8D2 /* Profile.swift */; };
 		5A97F0EC281D0B04006FA8D2 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97F0EB281D0B04006FA8D2 /* Profiles.swift */; };
+		5A97F112281E4629006FA8D2 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97F111281E4629006FA8D2 /* ListingTableViewCell.swift */; };
 		5ADB11EE2818FD9E00BBF7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11ED2818FD9E00BBF7FC /* AppDelegate.swift */; };
 		5ADB11F02818FD9E00BBF7FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11EF2818FD9E00BBF7FC /* SceneDelegate.swift */; };
 		5ADB11F22818FD9E00BBF7FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADB11F12818FD9E00BBF7FC /* HomeViewController.swift */; };
@@ -33,6 +34,7 @@
 		39DE1B4E2D4DDAC46137B4BD /* Pods-BCSell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSell.debug.xcconfig"; path = "Target Support Files/Pods-BCSell/Pods-BCSell.debug.xcconfig"; sourceTree = "<group>"; };
 		5A97F0E9281D08DE006FA8D2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5A97F0EB281D0B04006FA8D2 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		5A97F111281E4629006FA8D2 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		5ADB11EA2818FD9E00BBF7FC /* BCSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADB11ED2818FD9E00BBF7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADB11EF2818FD9E00BBF7FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				5ADB11F12818FD9E00BBF7FC /* HomeViewController.swift */,
 				5ADB12072819D35700BBF7FC /* ListingTableViewController.swift */,
 				5ADB120B281A22D300BBF7FC /* PhotosCollectionViewCell.swift */,
+				5A97F111281E4629006FA8D2 /* ListingTableViewCell.swift */,
 				5ADB121B281CFA4900BBF7FC /* ProfileViewController.swift */,
 				5A97F0E9281D08DE006FA8D2 /* Profile.swift */,
 				5A97F0EB281D0B04006FA8D2 /* Profiles.swift */,
@@ -266,6 +269,7 @@
 			files = (
 				5ADB1212281CC92D00BBF7FC /* Photos.swift in Sources */,
 				5ADB1210281CA55900BBF7FC /* Photo.swift in Sources */,
+				5A97F112281E4629006FA8D2 /* ListingTableViewCell.swift in Sources */,
 				5ADB1214281CD17100BBF7FC /* UIBarButtonItem+hide.swift in Sources */,
 				5A97F0EA281D08DE006FA8D2 /* Profile.swift in Sources */,
 				5ADB120E281B5BDE00BBF7FC /* Listings.swift in Sources */,

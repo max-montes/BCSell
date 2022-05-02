@@ -12,6 +12,14 @@ import FirebaseGoogleAuthUI
 import FirebaseAuthUI
 import GoogleSignIn
 
+
+private let dateFormatter: DateFormatter =  {
+    let dateFormatter = DateFormatter()
+    dateFormatter.setLocalizedDateFormatFromTemplate("EEE, MMM d, h:mm a")
+    //dateFormatter.dateStyle = .medium
+    //dateFormatter.timeStyle = .none
+    return dateFormatter
+}()
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,7 +44,7 @@ class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-    }
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,7 +65,7 @@ class HomeViewController: UIViewController {
             let destination = segue.destination as! ListingTableViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
             destination.listing = listings.listingsArray[selectedIndexPath.row]
-            destination.profile = self.currentProfile
+            destination.profile = profiles.getProfile(postingUserID: listings.listingsArray[selectedIndexPath.row].postingUserID)
         } else if segue.identifier == "AddListing" {
             let navigationController = segue.destination as! UINavigationController
             let destination = navigationController.viewControllers.first as! ListingTableViewController
@@ -75,6 +83,8 @@ class HomeViewController: UIViewController {
                 return
             }
             self.currentProfile = self.profiles.getProfile(postingUserID: postingUserID)
+            self.currentProfile.postingUserID = postingUserID
+            self.currentProfile.documentID = postingUserID
         }
     }
 
@@ -112,9 +122,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = listings.listingsArray[indexPath.row].listingItemName
-        cell.detailTextLabel?.text = listings.listingsArray[indexPath.row].author
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ListingTableViewCell
+        cell.itemNameLabel.text = listings.listingsArray[indexPath.row].listingItemName
+        cell.authorLabel.text = listings.listingsArray[indexPath.row].author
+        cell.dateLabel.text = dateFormatter.string(from: listings.listingsArray[indexPath.row].postedOn)
         return cell
     }
 }
