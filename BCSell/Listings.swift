@@ -2,7 +2,7 @@
 //  Listings.swift
 //  BCSell
 //
-//  Created by Max Montes on 4/28/22.
+//  Created by Max Montes Soza on 4/28/22.
 //
 
 import Foundation
